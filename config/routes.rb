@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   put '/users/:id/activate', to: 'users#update'
   put '/users/:id/deactivate', to: 'users#update'
 
-  post '/posts/:user_id', to: 'posts#create'
+  get '/posts', to: 'posts#index'
+  post '/posts', to: 'posts#create'
+  # should the route for posts actually be nested in users?
 end
